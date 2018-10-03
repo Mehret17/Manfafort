@@ -25,5 +25,18 @@ namespace Manafort.Controllers
                 new Incarcerated {Name = "Omarosa Manigault Newman ", PrisonerNo = 005, Interests = "Stealing", Gender = Gender.Female, ActuallyGuilty = false, EducationalLevel = EducationalLevel.GradSchool, PrefferedVice = PreferredVice.Hookers, TypeofCrime = "Breach of Cotract", Weapon ="Breathe Fire"},
             };
         }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<Incarcerated>> GetAll()
+        {
+            return Prisoners;
+        }
+
+        [HttpPost]
+        public IActionResult AddAPrisoner (Incarcerated incarcerated)
+        {
+            Prisoners.Add(incarcerated);
+            return Ok();
+        }
     }
 }
