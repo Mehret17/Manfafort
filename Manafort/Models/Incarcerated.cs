@@ -11,7 +11,7 @@ namespace Manafort.Models
         public int PrisonerNo { get; set; }
         public Gender Gender { get; set; }
         public EducationalLevel EducationalLevel { get; set; }
-        public string PrefferedVice { get; set; }
+        public PreferredVice PrefferedVice { get; set; }
         public string Weapon { get; set; }
         public string TypeofCrime { get; set; }
         public bool ActuallyGuilty { get; set; }
