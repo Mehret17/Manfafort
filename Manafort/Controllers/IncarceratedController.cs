@@ -13,24 +13,37 @@ namespace Manafort.Controllers
     [ApiController]
     public class IncarceratedController : ControllerBase
     {
+<<<<<<< HEAD
         private readonly InmateStorage _storage;
+=======
+        // field
+        private readonly InmateStorage storage;
+>>>>>>> 9e20048cbfe481901fa20fcb74b7f62a556cb205
 
         public IncarceratedController()
         {
-            _storage = new InmateStorage();
+            storage = new InmateStorage();
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Incarcerated>> GetAll()
         {
+<<<<<<< HEAD
             return _storage;
+=======
+            
+            var allPrisoners = storage.GetAll();
+            return Ok(allPrisoners);
+            
+>>>>>>> 9e20048cbfe481901fa20fcb74b7f62a556cb205
         }
 
         [HttpPost]
-        public IActionResult AddAPrisoner (Incarcerated incarcerated)
+        public IActionResult AddaPrisoner(Incarcerated incarcerated)
         {
-            _storage.Add(incarcerated);
+            storage.Add(incarcerated);
             return Ok();
         }
     }
 }
+
