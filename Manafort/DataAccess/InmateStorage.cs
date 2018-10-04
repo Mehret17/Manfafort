@@ -10,8 +10,9 @@ namespace Manafort.DataAccess
     public class InmateStorage
     {
         static List<Incarcerated> _cellBlock = new List<Incarcerated>();
+       // private List<Incarcerated> allSeedData;
 
-        static void IncarceratedController()
+        static InmateStorage()
         {
             List<Incarcerated>SeedPrisoners = new List<Incarcerated>
             {
@@ -22,10 +23,14 @@ namespace Manafort.DataAccess
                 new Incarcerated {Name = "Omarosa Manigault Newman ", PrisonerNo = 5, Interests = "Stealing", Gender = Gender.Female, ActuallyGuilty = false, EducationalLevel = EducationalLevel.GradSchool, PrefferedVice = PreferredVice.Hookers, TypeofCrime = "Breach of Cotract", Weapon ="Breathe Fire"},
             };
 
-            _cellBlock.AddRange(SeedPrisoners);
+           _cellBlock.AddRange(SeedPrisoners);
+        }
+        public IEnumerable<Incarcerated> GetAll()
+        {
+            return _cellBlock;
         }
 
-        public void Add(Incarcerated incarcerated)
+        internal void Add(Incarcerated incarcerated)
         {
             incarcerated.PrisonerNo = _cellBlock.Any() ? _cellBlock.Max(i => i.PrisonerNo) + 1 : 1;
             _cellBlock.Add(incarcerated);
