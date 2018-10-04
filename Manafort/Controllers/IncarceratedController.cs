@@ -15,8 +15,6 @@ namespace Manafort.Controllers
     {
         private readonly InmateStorage _storage;
 
-        static List<Incarcerated> Prisoners;
-
         public IncarceratedController()
         {
             _storage = new InmateStorage();
@@ -25,7 +23,7 @@ namespace Manafort.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Incarcerated>> GetAll()
         {
-            return Prisoners;
+            return _storage;
         }
 
         [HttpPost]
