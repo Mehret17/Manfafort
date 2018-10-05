@@ -7,18 +7,9 @@ namespace Manafort.Models
 {
     public class Services
     {
-        public ServiceNames ServiceNames { get; set; }
+        public string ServiceNames { get; set; }
         public int Amount { get; set; }
-        public PaymentType PaymentType { get; set; }
-    }
-
-    public enum ServiceNames
-    {
-        CellPhones,
-        BodyGuard,
-        Smuggling,
-        Riot,
-        Hits
+       // public PaymentType PaymentType { get; set; }
     }
 
     public enum PaymentType
