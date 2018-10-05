@@ -149,12 +149,5 @@ namespace Manafort.DataAccess
             return _cellBlock.First(inmate => inmate.PrisonerNo == PrisonerNo);
         }
     }
-<<<<<<< HEAD
-    //for merge fix
-}
-=======
 }
 
-
-
->>>>>>> f4cc342dd0fa5f5466cfa73833984d19d71617a4
