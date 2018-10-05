@@ -13,12 +13,8 @@ namespace Manafort.Controllers
     [ApiController]
     public class IncarceratedController : ControllerBase
     {
-<<<<<<< HEAD
-        private readonly InmateStorage _storage;
-=======
         // field
         private readonly InmateStorage storage;
->>>>>>> 9e20048cbfe481901fa20fcb74b7f62a556cb205
 
         public IncarceratedController()
         {
@@ -27,15 +23,17 @@ namespace Manafort.Controllers
 
         [HttpGet]
         public ActionResult<IEnumerable<Incarcerated>> GetAll()
-        {
-<<<<<<< HEAD
-            return _storage;
-=======
-            
+        {   
             var allPrisoners = storage.GetAll();
             return Ok(allPrisoners);
-            
->>>>>>> 9e20048cbfe481901fa20fcb74b7f62a556cb205
+        }
+
+        [HttpGet("interests")]
+        public ActionResult<IEnumerable<Incarcerated>> GetInterests()
+        {
+            var allPrisoners = storage.GetAll();
+            var prisonerInterests = allPrisoners.Where(inmate => inmate.Interests == "Fraud");
+            return Ok(prisonerInterests);
         }
 
         [HttpPost]
