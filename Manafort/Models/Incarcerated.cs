@@ -16,6 +16,6 @@ namespace Manafort.Models
         public string TypeofCrime { get; set; }
         public bool ActuallyGuilty { get; set; }
         public string Interests { get; set; }
-        public List<Services> services { get; set; } = new List<Services>();
+        public List<Services> Services { get; set; } = new List<Services>();
     }
 }

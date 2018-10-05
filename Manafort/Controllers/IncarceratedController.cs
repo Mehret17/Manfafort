@@ -38,12 +38,11 @@ namespace Manafort.Controllers
         }
 
         [HttpGet("{prisonerNo}/services")]
-        public ActionResult<IEnumerable<Incarcerated>> GetServices(int prisonerNo, Services services)
+        public ActionResult<IEnumerable<Incarcerated>> GetServices(int prisonerNo)
         {
             var prisonerId = storage.GetById(prisonerNo);
-            var prisonerService = prisonerId.services;
+            var prisonerService = prisonerId.Services;
             return Ok(prisonerService);
-
         }
 
         [HttpPost]
