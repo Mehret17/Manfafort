@@ -16,7 +16,6 @@ namespace Manafort.Controllers
         // field
         private readonly InmateStorage storage;
 
-
         public IncarceratedController()
         {
             storage = new InmateStorage();
@@ -24,7 +23,8 @@ namespace Manafort.Controllers
 
         [HttpGet]
         public ActionResult<IEnumerable<Incarcerated>> GetAll()
-        {   
+
+        {
             var allPrisoners = storage.GetAll();
             return Ok(allPrisoners);
         }
@@ -61,6 +61,15 @@ namespace Manafort.Controllers
             return Ok(chessPrisoners);
         }
 
+        [HttpGet("{prisonerNo}/services")]
+        public ActionResult<IEnumerable<Incarcerated>> GetServices(int prisonerNo, Services services)
+        {
+            var prisonerId = storage.GetById(prisonerNo);
+            var prisonerService = prisonerId.services;
+            return Ok(prisonerService);
+
+        }
+
         [HttpPost]
         public IActionResult AddaPrisoner(Incarcerated incarcerated)
         {
@@ -69,4 +78,3 @@ namespace Manafort.Controllers
         }
     }
 }
-
