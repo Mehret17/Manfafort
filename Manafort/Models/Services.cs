@@ -9,7 +9,7 @@ namespace Manafort.Models
     {
         public string ServiceNames { get; set; }
         public int Amount { get; set; }
-       // public PaymentType PaymentType { get; set; }
+        // public PaymentType PaymentType { get; set; }
     }
 
     public enum PaymentType
