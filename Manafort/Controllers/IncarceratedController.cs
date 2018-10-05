@@ -45,6 +45,14 @@ namespace Manafort.Controllers
             return Ok(prisonerService);
         }
 
+        [HttpGet("{prionserNo}/friends")]
+        public ActionResult<IEnumerable<Incarcerated>> GetFriends(int prionserNo)
+        {
+            var prisonerId = storage.GetById(prionserNo);
+            var prisonerFriends = prisonerId.Friends;
+            return Ok(prisonerFriends);
+        }
+
         [HttpPost]
         public IActionResult AddaPrisoner(Incarcerated incarcerated)
         {

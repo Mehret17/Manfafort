@@ -87,7 +87,7 @@ namespace Manafort.DataAccess
                     Gender = Gender.Female,
                     ActuallyGuilty = false,
                     EducationalLevel = EducationalLevel.GradSchool,
-                    TypeofCrime = "Breach of Cotract",
+                    TypeofCrime = "Breach of Contract",
                     Weapon ="Breathe Fire",
                     Services = new List<Services>
                     {
@@ -116,6 +116,28 @@ namespace Manafort.DataAccess
 
             _cellBlock.AddRange(SeedPrisoners);
         }
+
+        //public void AddFriends(Incarcerated incarcerated)
+        //{
+        //    var potentialFriend = new Incarcerated();
+        //    if(potentialFriend.Interests == incarcerated.Interests)
+        //    {
+        //        incarcerated.Friends.Add(potentialFriend);
+        //    }
+        //}
+
+        public void AddFriends()
+        {
+            foreach(var inmate in _cellBlock)
+            {
+                var potentialFriend = new Incarcerated();
+                if (potentialFriend.Interests == inmate.Interests)
+                {
+                    inmate.Friends.Add(potentialFriend);
+                }
+            }
+        }
+
         public IEnumerable<Incarcerated> GetAll()
         {
             return _cellBlock;
