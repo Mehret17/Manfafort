@@ -32,7 +32,7 @@ namespace Manafort.Controllers
         public ActionResult<IEnumerable<Incarcerated>> GetInterests()
         {
             var allPrisoners = storage.GetAll();
-            var prisonerInterests = allPrisoners.Where(inmate => inmate.Interests == "Fraud");
+            var prisonerInterests = allPrisoners.Where(inmate => inmate.Interests == "fraud".ToLower());
             return Ok(prisonerInterests);
         }
 
