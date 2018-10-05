@@ -10,7 +10,7 @@ namespace Manafort.DataAccess
     public class InmateStorage
     {
         static List<Incarcerated> _cellBlock = new List<Incarcerated>();
-       // private List<Incarcerated> allSeedData;
+        // private List<Incarcerated> allSeedData;
 
         static InmateStorage()
         {
@@ -101,7 +101,26 @@ namespace Manafort.DataAccess
                     TypeofCrime = "Breach of Cotract",
                     Weapon ="Breathe Fire",
                     services = new List<Services>
-                    { 
+                    {
+                        new Services() {ServiceNames = "CellPhone", Amount = 10},
+                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
+                        new Services() {ServiceNames = "Smuggling", Amount = 15},
+                        new Services() {ServiceNames = "Riot", Amount = 200},
+                        new Services() {ServiceNames = "Hits", Amount = 250},
+                        new Services() {ServiceNames = "Haircut", Amount = 10}
+                    }
+                },
+                new Incarcerated {
+                    Name = "Frank Abagnale Jr.",
+                    PrisonerNo = 6,
+                    Interests = "Chess",
+                    Gender = Gender.Male,
+                    ActuallyGuilty = false,
+                    EducationalLevel = EducationalLevel.GradSchool,
+                    TypeofCrime = "Bank Fraud",
+                    Weapon ="Wit",
+                    services = new List<Services>
+                    {
                         new Services() {ServiceNames = "CellPhone", Amount = 10},
                         new Services() {ServiceNames = "BodyGuard", Amount = 12},
                         new Services() {ServiceNames = "Smuggling", Amount = 15},
@@ -112,7 +131,7 @@ namespace Manafort.DataAccess
                 },
             };
 
-           _cellBlock.AddRange(SeedPrisoners);
+            _cellBlock.AddRange(SeedPrisoners);
         }
         public IEnumerable<Incarcerated> GetAll()
         {
@@ -130,5 +149,12 @@ namespace Manafort.DataAccess
             return _cellBlock.First(inmate => inmate.PrisonerNo == PrisonerNo);
         }
     }
+<<<<<<< HEAD
     //for merge fix
 }
+=======
+}
+
+
+
+>>>>>>> f4cc342dd0fa5f5466cfa73833984d19d71617a4
