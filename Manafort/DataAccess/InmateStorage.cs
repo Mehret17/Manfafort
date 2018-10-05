@@ -25,14 +25,12 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.GradSchool,
                     TypeofCrime = "Fraud",
                     Weapon = "Snakes",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
                         new Services() {ServiceNames = "CellPhone", Amount = 10},
                         new Services() {ServiceNames = "BodyGuard", Amount = 12},
                         new Services() {ServiceNames = "Smuggling", Amount = 15},
-                        new Services() {ServiceNames = "Riot", Amount = 200},
-                        new Services() {ServiceNames = "Hits", Amount = 250},
-                        new Services() {ServiceNames = "Haircut", Amount = 10}
+
                     }
                 },
                 new Incarcerated {
@@ -44,11 +42,8 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.GradSchool,
                     TypeofCrime = "Lying",
                     Weapon = "Mouth",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
-                        new Services() {ServiceNames = "CellPhone", Amount = 10},
-                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
-                        new Services() {ServiceNames = "Smuggling", Amount = 15},
                         new Services() {ServiceNames = "Riot", Amount = 200},
                         new Services() {ServiceNames = "Hits", Amount = 250},
                         new Services() {ServiceNames = "Haircut", Amount = 10}
@@ -62,14 +57,11 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.College,
                     TypeofCrime = "Conspiracy",
                     Weapon = "Blow Torch",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
-                        new Services() {ServiceNames = "CellPhone", Amount = 10},
-                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
-                        new Services() {ServiceNames = "Smuggling", Amount = 15},
-                        new Services() {ServiceNames = "Riot", Amount = 200},
-                        new Services() {ServiceNames = "Hits", Amount = 250},
-                        new Services() {ServiceNames = "Haircut", Amount = 10}
+                        new Services() {ServiceNames = "ManScaping", Amount = 200},
+                        new Services() {ServiceNames = "PrivateChef", Amount = 250},
+                        new Services() {ServiceNames = "CornBreadProtector", Amount = 10}
                     }
                 },
                 new Incarcerated {
@@ -81,14 +73,11 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.GradSchool,
                     TypeofCrime = "Lying",
                     Weapon ="Manuiplation",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
-                        new Services() {ServiceNames = "CellPhone", Amount = 10},
-                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
-                        new Services() {ServiceNames = "Smuggling", Amount = 15},
-                        new Services() {ServiceNames = "Riot", Amount = 200},
-                        new Services() {ServiceNames = "Hits", Amount = 250},
-                        new Services() {ServiceNames = "Haircut", Amount = 10}
+                        new Services() {ServiceNames = "CornBreadThief", Amount = 10},
+                        new Services() {ServiceNames = "ToiletWine", Amount = 300},
+                        new Services() {ServiceNames = "SoapRope", Amount = 15},
                     }
                 },
                 new Incarcerated {
@@ -100,14 +89,11 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.GradSchool,
                     TypeofCrime = "Breach of Cotract",
                     Weapon ="Breathe Fire",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
-                        new Services() {ServiceNames = "CellPhone", Amount = 10},
-                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
-                        new Services() {ServiceNames = "Smuggling", Amount = 15},
-                        new Services() {ServiceNames = "Riot", Amount = 200},
-                        new Services() {ServiceNames = "Hits", Amount = 250},
-                        new Services() {ServiceNames = "Haircut", Amount = 10}
+                        new Services() {ServiceNames = "EatASoul", Amount = 10},
+                        new Services() {ServiceNames = "RoastedRamen", Amount = 12},
+                        new Services() {ServiceNames = "ShivMaking", Amount = 10}
                     }
                 },
                 new Incarcerated {
@@ -119,14 +105,11 @@ namespace Manafort.DataAccess
                     EducationalLevel = EducationalLevel.GradSchool,
                     TypeofCrime = "Bank Fraud",
                     Weapon ="Wit",
-                    services = new List<Services>
+                    Services = new List<Services>
                     {
-                        new Services() {ServiceNames = "CellPhone", Amount = 10},
-                        new Services() {ServiceNames = "BodyGuard", Amount = 12},
-                        new Services() {ServiceNames = "Smuggling", Amount = 15},
-                        new Services() {ServiceNames = "Riot", Amount = 200},
-                        new Services() {ServiceNames = "Hits", Amount = 250},
-                        new Services() {ServiceNames = "Haircut", Amount = 10}
+                        new Services() {ServiceNames = "HurtSomeone", Amount = 200},
+                        new Services() {ServiceNames = "RussianLessons", Amount = 250},
+                        new Services() {ServiceNames = "WriteASong", Amount = 10}
                     }
                 },
             };
