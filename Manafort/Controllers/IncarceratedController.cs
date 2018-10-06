@@ -29,7 +29,7 @@ namespace Manafort.Controllers
             return Ok(allPrisoners);
         }
 
-        [HttpGet("{interests}")]
+        [HttpGet("interests/{interests}")]
         public ActionResult<IEnumerable<Incarcerated>> GetInterests(string interests)
         {
             var allPrisoners = storage.GetAll();
@@ -62,13 +62,6 @@ namespace Manafort.Controllers
             var prisonerEnemies = prisonerId.Enemies;
             return Ok(prisonerEnemies);
         }
-
-        [HttpPost]
-        //public IActionResult AddFrinends(Incarcerated incarcerated)
-        //{
-        //    var prisonerId = storage.GetById
-        //    return Ok();
-        //}
 
         [HttpPost]
         public IActionResult AddaPrisoner(Incarcerated incarcerated)
