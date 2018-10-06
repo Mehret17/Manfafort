@@ -150,12 +150,25 @@ namespace Manafort.DataAccess
         {
             foreach (var inmate in _cellBlock)
             {
-                if (incarcerated.Interests == inmate.Interests)
+                if (incarcerated.Interests == inmate.Interests && incarcerated.PrisonerNo != inmate.PrisonerNo)
                 {
                     incarcerated.Friends.Add(inmate);
                 }
             }
             return incarcerated.Friends;
+        }
+
+
+        public IEnumerable<Incarcerated> Enemies(Incarcerated incarcerated)
+        {
+            foreach (var inmate in _cellBlock)
+            {
+                if (incarcerated.Interests != inmate.Interests)
+                {
+                    incarcerated.Enemies.Add(inmate);
+                }
+            }
+            return incarcerated.Enemies;
         }
     }
 }
