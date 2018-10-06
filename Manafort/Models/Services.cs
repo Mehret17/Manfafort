@@ -12,13 +12,13 @@ namespace Manafort.Models
         // public PaymentType PaymentType { get; set; }
     }
 
-    public enum PaymentType
-    {
-        Liquor,
-        Cigarettes,
-        Favors,
-        Ramen,
-        Steak,
-        MemoryFoamMattress
-    }
+   // public enum PaymentType
+    //{
+    //    Liquor,
+    //    Cigarettes,
+    //    Favors,
+    //    Ramen,
+    //    Steak,
+    //    MemoryFoamMattress
+    //}
 }
