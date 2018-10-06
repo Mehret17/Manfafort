@@ -45,10 +45,11 @@ namespace Manafort.Controllers
             return Ok(prisonerService);
         }
 
-        [HttpGet("{prionserNo}/friends")]
-        public ActionResult<IEnumerable<Incarcerated>> GetFriends(int prionserNo)
+        [HttpGet("{prisonerNo}/friends")]
+        public ActionResult<IEnumerable<Incarcerated>> GetFriends(int prisonerNo)
         {
-            var prisonerId = storage.GetById(prionserNo);
+            var prisonerId = storage.GetById(prisonerNo);
+            storage.AddFriends(prisonerId);
             var prisonerFriends = prisonerId.Friends;
             return Ok(prisonerFriends);
         }

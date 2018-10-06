@@ -117,26 +117,6 @@ namespace Manafort.DataAccess
             _cellBlock.AddRange(SeedPrisoners);
         }
 
-        //public void AddFriends(Incarcerated incarcerated)
-        //{
-        //    var potentialFriend = new Incarcerated();
-        //    if(potentialFriend.Interests == incarcerated.Interests)
-        //    {
-        //        incarcerated.Friends.Add(potentialFriend);
-        //    }
-        //}
-
-        public void AddFriends()
-        {
-            foreach(var inmate in _cellBlock)
-            {
-                var potentialFriend = new Incarcerated();
-                if (potentialFriend.Interests == inmate.Interests)
-                {
-                    inmate.Friends.Add(potentialFriend);
-                }
-            }
-        }
 
         public IEnumerable<Incarcerated> GetAll()
         {
@@ -152,6 +132,30 @@ namespace Manafort.DataAccess
         public Incarcerated GetById(int PrisonerNo)
         {
             return _cellBlock.First(inmate => inmate.PrisonerNo == PrisonerNo);
+        }
+
+
+        //public IEnumerable<Incarcerated> AddFriends(Incarcerated incarcerated)
+        //{
+        //    var potentialFriend = new Incarcerated();
+        //    if (potentialFriend.Interests == incarcerated.Interests)
+        //    {
+        //        incarcerated.Friends.Add(potentialFriend);
+        //    }
+        //    return incarcerated.Friends;
+        //}
+
+
+        public IEnumerable<Incarcerated> AddFriends(Incarcerated incarcerated)
+        {
+            foreach (var inmate in _cellBlock)
+            {
+                if (incarcerated.Interests == inmate.Interests)
+                {
+                    incarcerated.Friends.Add(inmate);
+                }
+            }
+            return incarcerated.Friends;
         }
     }
 }
