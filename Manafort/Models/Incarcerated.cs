@@ -18,5 +18,6 @@ namespace Manafort.Models
         public string Interests { get; set; }
         public List<Services> Services { get; set; } = new List<Services>();
         public List<Incarcerated> Friends { get; set; } = new List<Incarcerated>();
+        public List<Incarcerated> Enemies { get; set; } = new List<Incarcerated>();
     }
 }
